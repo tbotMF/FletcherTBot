@@ -10,11 +10,11 @@ public class MakeUnf extends Action{
 	private final ABC abc = manager.getABC();
 	@Override
 	public void execute() {
-		while (Globals.MAKE_UNF.getStatus()) {
+		while (Globals.MAKE_UNF.getStatus()) 
 			for (String resource : skillManager.getInventoryResources())
 				if (Inventory.find(resource)[0].click("Use"))
 					this.abc.waitItemInteractionDelay();
-		}
+		
 		
 	}
 
